@@ -28,8 +28,8 @@
         /// </summary>
         public void Enable()
         {
-            registryService.SetValue(RegistryHive.LocalMachine, @"Software\Microsoft\Windows Script Host\Settings", "Enabled", 1, RegistryValueKind.DWord);
-            registryService.SetValue(RegistryHive.CurrentUser, @"Software\Microsoft\Windows Script Host\Settings", "Enabled", 1, RegistryValueKind.DWord);
+            registryService.SetValue(RegistryHive.LocalMachine, ScriptHostSettingsSubKey, "Enabled", 1, RegistryValueKind.DWord);
+            registryService.SetValue(RegistryHive.CurrentUser, ScriptHostSettingsSubKey, "Enabled", 1, RegistryValueKind.DWord);
         }
 
         /// <summary>
@@ -38,8 +38,8 @@
         /// </summary>
         public void Disable()
         {
-            registryService.SetValue(RegistryHive.LocalMachine, @"Software\Microsoft\Windows Script Host\Settings", "Enabled", 0, RegistryValueKind.DWord);
-            registryService.SetValue(RegistryHive.CurrentUser, @"Software\Microsoft\Windows Script Host\Settings", "Enabled", 0, RegistryValueKind.DWord);
+            registryService.SetValue(RegistryHive.LocalMachine, ScriptHostSettingsSubKey, "Enabled", 0, RegistryValueKind.DWord);
+            registryService.SetValue(RegistryHive.CurrentUser, ScriptHostSettingsSubKey, "Enabled", 0, RegistryValueKind.DWord);
         }
 
         /// <summary>
